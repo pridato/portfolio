@@ -21,11 +21,11 @@ const { startDate, endDate, title, description, skills } = Astro.props;
     <div class="w-3/4">
       <div class="font-bold text-white">{title}</div>
       <p class="mt-2 text-[#5A6F96]">{description}</p>
-      <div class="flex flex-wrap mt-2 space-x-2">
+      <div class="flex flex-wrap mt-2 space-x-2 gap-x-2">
         <!-- habilidades -->
         {
           skills.map(skill => (
-            <span class="skill-badge bg-[#1a202c] text-white px-2 py-1 rounded">{skill}</span>
+            <span class="bg-teal-400/10 text-teal-300 text-xs  px-3  mt-2 py-1 rounded-2xl flex items-center justify-center">{skill}</span>
             )
           )
         }
