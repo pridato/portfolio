@@ -1,0 +1,49 @@
+---
+interface Props {
+  startDate: string;
+  endDate: string;
+  title: string;
+  description: string;
+  skills: string[];
+}
+
+const { startDate, endDate, title, description, skills } = Astro.props;
+---
+
+<button class="experience-button hover:bg-[#0E172A] rounded-lg p-4 text-left w-full max-w-2xl">
+  <!-- contenedor de info -->
+  <div class="flex space-x-4">
+    <!-- fechas inicio fin -->
+    <div class=" text-gray-400">
+      <span>{startDate} — {endDate}</span>
+    </div>
+    <!-- descripcion empresa y habilidades tratadas -->
+    <div class="w-3/4">
+      <div class="font-bold text-white">{title}</div>
+      <p class="mt-2 text-[#5A6F96]">{description}</p>
+      <div class="flex flex-wrap mt-2 space-x-2">
+        <!-- habilidades -->
+        {
+          skills.map(skill => (
+            <span class="skill-badge bg-[#1a202c] text-white px-2 py-1 rounded">{skill}</span>
+            )
+          )
+        }
+      </div>
+    </div>
+  </div>
+</button>
+
+<style>
+  button.experience-button {
+    transition: background-color 0.3s ease;
+  }
+
+  .skill-badge {
+    background-color: #1a202c;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    margin-bottom: 0.5rem;
+  }
+</style>
