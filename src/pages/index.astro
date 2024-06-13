@@ -1,26 +1,39 @@
 ---
+import Github from '../../public/icons/github.astro';
+import Linkedin from '../../public/icons/linkedin.astro';
 import ArrowButton from '../components/arrow-button.astro';
 import Experience from '../components/experience/experience.astro';
+import Proyects from '../components/proyects/proyects.astro';
 import Skills from '../components/skills/skills.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Portfolio">
-	<main class="flex flex-col text-white w-full">
+	<main class="flex flex-col gap-y-10 text-white w-full">
 		<!-- container primera vista del usuario  -->
 		<div class="h-[100vh] flex flex-col items-center justify-center ">
 			<h1 class="text-2xl" id="typewriter">Full Stack Developer</h1>
 			<h2 class="roboto-regular text-8xl">David Arroyo</h2>
+      <!-- icons -->
+      <div class="icons-container mt-8 flex items-center justify-center gap-x-4">
+         <a href="https://github.com/pridato" target="_blank">
+          <Github />
+         </a>
+         <a href="https://www.linkedin.com/in/david-arroyo234/" target="_blank">
+          <Linkedin />
+         </a>
+        
+      </div>
 		  <ArrowButton />
 		</div>
 
     <!-- experiencias -->
      <Experience />
+     <Proyects />
      <Skills />
 	</main>
 
 </Layout>
-
 <style>
 
   h1 {

@@ -1,18 +1,18 @@
 ---
 import ExperienceCard from "./experience-card.astro";
-import Bag from "./icons/bag.astro";
+import Bag from "../../../public/icons/bag.astro"
 ---
 
 <div id="container" class="w-full">
-  <div class="mt-[20vh] mx-96 px-4 py-2">
+  <div class="mt-[20vh] mx-96 px-4 ">
     <!-- bloque experiencia con svg -->
-    <div class="flex w-fit items-center justify-center mb-5 gap-x-3">
+    <div class="flex w-fit items-center justify-center  gap-x-3">
       <Bag />
       <h1 class="text-3xl onest">Experiencia laboral</h1>
     </div>
 
     <!-- experiencias -->
-     <div class="ml-20 mb-10">
+     <div class="ml-20 mt-10">
       <ExperienceCard
           startDate="Marzo 2024"
           endDate="Junio 2024"
@@ -23,7 +23,7 @@ import Bag from "./icons/bag.astro";
      </div>
   </div>
 </div>
-<style>
+<style is:global>
   .onest {
   font-family: "Onest", sans-serif;
   font-optical-sizing: auto;
