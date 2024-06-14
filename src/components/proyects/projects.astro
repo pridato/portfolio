@@ -1,5 +1,6 @@
 ---
-
+import { projects } from "../../utils/globales"
+import ProjectCard from "./project-card.astro"
 ---
 <div class="flex flex-col gap-y-4 mx-96 my-10">
   <!-- titulo -->
@@ -12,5 +13,16 @@
       <path d="M10 9l2 -2l-2 -2" />
     </svg>
     <h1 class="text-3xl onest">Mis Proyectos </h1>
+  </div>
+
+  <!-- container de los cards -->
+  <div class="flex flex-col items-center justify-center gap-y-5">
+    {
+      projects.map(
+        project => (
+          <ProjectCard {...project} />
+        )
+      )
+    }
   </div>
 </div>
