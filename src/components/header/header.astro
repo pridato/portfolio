@@ -2,29 +2,52 @@
 
 ---
 <script>
+  // script para dependiendo del scroll, si se baja a cierta altura, se accionan cambios tailwind y sino retirar, cambiando el w de este
   document.addEventListener('scroll', function() {
     const header = document.getElementById('header')!;
+    const textDownload = document.getElementById('text-download')!;
     if (window.scrollY > 100) {
-      header.classList.add('bg-gray-800', 'bg-opacity-95', 'w-1/2', 'rounded-full', 'mt-4');
+      textDownload.classList.add('hidden');
+      header.classList.add('bg-gray-800', 'bg-opacity-90', 'backdrop-blur', 'w-1/2', 'rounded-full', 'mt-4', 'left-1/2', 'transform', '-translate-x-1/2');
       header.classList.remove('w-full');
-      header.style.left = '50%';
-      header.style.transform = 'translateX(-50%)';
     } else {
-      header.classList.remove('bg-gray-800', 'bg-opacity-95', 'w-1/2', 'rounded-full');
+      textDownload.classList.remove('hidden');
+      header.classList.remove('bg-gray-800', 'bg-opacity-90', 'backdrop-blur', 'w-1/2', 'rounded-full', 'mt-4', 'left-1/2', 'transform', '-translate-x-1/2');
       header.classList.add('w-full');
-      header.style.left = '';
-      header.style.transform = '';
     }
   });
 </script>
 <header id="header" class="px-4 fixed top-0 left-0 w-full transition-all duration-300 z-50">
   <nav class="flex justify-between items-center p-4">
-    <div class="logo text-white text-lg">Logo</div>
-    <ul class="flex gap-8">
+    <!-- enlace al inicio de la página -->
+    <a href="#index" class="logo text-white text-lg">
+      <!-- svg del logo -->
+      <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="10" y="35" fill="white" font-family="Verdana" font-size="24" font-weight="bold">&lt;DA /&gt;</text>
+      </svg>
+    </a>
+
+    <ul class="flex items-center justify-center gap-8">
       <li><a href="#experience" class="text-white text-lg hover:text-purple-400 transition">Experience</a></li>
       <li><a href="#projects" class="text-white text-lg hover:text-purple-400 transition">Projects</a></li>
       <li><a href="#skills" class="text-white text-lg hover:text-purple-400 transition">Skills</a></li>
       <li><a href="#contact" class="text-white text-lg hover:text-purple-400 transition">Contact</a></li>
+      <li>
+        <a href="/Users/davidarroyo/Documents/curriculum 2.pdf" download class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-500 transition flex gap-x-2 items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+            <path d="M7 11l5 5l5 -5" />
+            <path d="M12 4l0 12" />
+          </svg>
+          <span id="text-download">Download CV</span>
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
+<style>
+  header {
+    transition: all 0.5s ease;
+  }
+</style>
