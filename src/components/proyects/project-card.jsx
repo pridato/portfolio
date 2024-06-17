@@ -34,12 +34,12 @@ const renderTagComponents = (tag) => {
   }
 };
 
-const ProjectCard = ({ name, description, tags, github_url }) => {
+const ProjectCard = ({ name, description, tags, github_url, image_url }) => {
   return (
     <div className="project-card-sm">
       <div className="card-border-gradient"></div>
       <div className="card-container">
-        <img src="https://unblast.com/wp-content/uploads/2018/08/Gradient-Mesh-22.jpg" alt="" />
+        <img src={image_url} alt="" />
         <div className="wrapper">
           <h1>{name}</h1>
           <p>{description}</p>
