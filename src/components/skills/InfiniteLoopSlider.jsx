@@ -5,7 +5,7 @@ const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
 
 const InfiniteLoopSlider = () => (
-  <div  className="tag-list">
+  <div  className="tag-list mt-10">
     {[...new Array(ROWS)].map((_, i) => (
       <div key={i} className="loop-slider" style={{
         '--duration': `${random(DURATION - 5000, DURATION + 5000)}ms`,

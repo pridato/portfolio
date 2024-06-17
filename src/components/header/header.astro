@@ -1,18 +1,14 @@
----
-
----
 <script>
-  // script para dependiendo del scroll, si se baja a cierta altura, se accionan cambios tailwind y sino retirar, cambiando el w de este
   document.addEventListener('scroll', function() {
     const header = document.getElementById('header')!;
     const textDownload = document.getElementById('text-download')!;
     if (window.scrollY > 100) {
       textDownload.classList.add('hidden');
-      header.classList.add('bg-gray-800', 'bg-opacity-90', 'backdrop-blur', 'w-1/2', 'rounded-full', 'mt-4', 'left-1/2', 'transform', '-translate-x-1/2');
+      header.classList.add('bg-gray-800', 'bg-opacity-90', 'backdrop-blur', 'w-full', 'md:w-1/2', 'rounded-full', 'mt-4', 'left-1/2', 'transform', '-translate-x-1/2');
       header.classList.remove('w-full');
     } else {
       textDownload.classList.remove('hidden');
-      header.classList.remove('bg-gray-800', 'bg-opacity-90', 'backdrop-blur', 'w-1/2', 'rounded-full', 'mt-4', 'left-1/2', 'transform', '-translate-x-1/2');
+      header.classList.remove('bg-gray-800', 'bg-opacity-90', 'backdrop-blur', 'w-full', 'md:w-1/2', 'rounded-full', 'mt-4', 'left-1/2', 'transform', '-translate-x-1/2');
       header.classList.add('w-full');
     }
   });
@@ -33,7 +29,7 @@
       <li><a href="#skills" class="text-white text-lg hover:text-purple-400 transition">Skills</a></li>
       <li><a href="#contact" class="text-white text-lg hover:text-purple-400 transition">Contact</a></li>
       <li>
-        <a href="/Users/davidarroyo/Documents/curriculum 2.pdf" download class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-500 transition flex gap-x-2 items-center justify-center">
+        <a href="/public/utils/curriculum-english.pdf" download class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-500 transition flex gap-x-2 items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
