@@ -13,20 +13,20 @@ export const projects: Project[] = [
     description: 'Reddit clone with Astro, svelte and spring boot as backend',
     tags: [Tag.Svelte, Tag.Astro, Tag.Spring],
     github_url: 'https://github.com/pridato/reddit',
-    image_url: '/public/images/reddit.png'
+    image_url: '/images/reddit.png'
   },
   {
     name: 'TuRestauranteEnCasa',
     description: 'Web app to order food and track it through different roles',
     tags: [Tag.Angular, Tag.Spring],
     github_url: 'https://github.com/pridato/RestauranteEnCasa',
-    image_url: '/public/images/restaurante.png'
+    image_url: '/images/restaurante.png'
   },
   {
     name: 'Agapea',
     description: 'Web app to manage a library',
     tags: [Tag.React, Tag.Node, Tag.Firebase, Tag.Stripe],
     github_url: 'https://github.com/pridato/Tienda-web-react',
-    image_url: '/public/images/agapea.png'
+    image_url: '/images/agapea.png'
   }
 ];
