@@ -3,7 +3,7 @@ import InfiniteLoopSlider from "./InfiniteLoopSlider";
 ---
 
 <div id="skills" class="flex flex-col gap-y-4 px-14 mb-20 mt-10 md:mx-20 lg:mx-56 xl:mx-96 lg:px-0">
-  <div class="skills-container flex gap-x-2 w-fit justify-center items-center ml-3">
+  <div class="skills-container flex gap-x-2 w-fit justify-center items-center  ml-3">
     <!-- img skills -->
     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bulb" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -16,16 +16,17 @@ import InfiniteLoopSlider from "./InfiniteLoopSlider";
   <InfiniteLoopSlider />
 </div>
 <style is:global>
-
-  .tag-list {
-    width: 50rem;
+.tag-list {
+    width: 100%;
+    max-width: 50rem;
     display: flex;
     flex-shrink: 0;
     flex-direction: column;
-    gap: 1rem 0;
+    gap: 1rem;
     position: relative;
     padding: 1.5rem 0;
     overflow: hidden;
+    margin: 0 auto;
   }
 
   .loop-slider .inner {
